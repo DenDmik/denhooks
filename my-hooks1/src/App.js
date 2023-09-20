@@ -10,7 +10,7 @@ const[vis,setVis]=React.useState(true)
   }
   return (
     <div className="App">
-      <header className="App-header">
+
         {/*/////////////////////////////////////////////////////*/}
       {/*  <img src={logo} className="App-logo" alt="logo" />*/}
       {/*  <p>*/}
@@ -26,8 +26,7 @@ const[vis,setVis]=React.useState(true)
       {/*  </a>*/}
       {/*  /////////////////////////////////////////////////////*/}
         {vis&&<Tags/>}
-        <button className="btn" onClick={changeVisible}>CHANGE VISIBLE</button>
-      </header>
+      <button className="item btn" onClick={changeVisible}>CHANGE VISIBLE</button>
     </div>
   );
 }

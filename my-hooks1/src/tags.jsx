@@ -37,16 +37,16 @@ const stop = ()=>{
 // запускаю таймер
 // timer()
   return (
-    <div>
+    <div className='container'>
      {tag.map((t,index)=>
         <div className={item} key={t}>{t}</div>)
      }
-<button onClick={()=>{setCount(count+1)}} className={item} >{count}</button>
-      <button onClick={addTag} className={item} style={{backgroundColor:'blue'}}>+</button>
+<button onClick={()=>{setCount(count+1)}} className={`${item} btn`} style={{backgroundColor:'#be0ddd99'}} >{count}</button>
+      <button onClick={addTag} className=' item btn' style={{backgroundColor:'blue'}}>+</button>
 
-      <button onClick={timer} className={item} style={{backgroundColor:'grey'}}>START</button>
+      <button onClick={timer} className='item btn' style={{backgroundColor:'grey'}}>START</button>
       {/*кнопка stop не останавливает timer() */}
-      <button onClick={stop} className={item} style={{backgroundColor:'red'}}>STOP</button>
+      <button onClick={stop} className='item btn' style={{backgroundColor:'#ffeb3b'}}>STOP</button>
     </div>
   );
 };
