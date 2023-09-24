@@ -4,6 +4,8 @@ const Tags = () => {
 
   const[count,setCount]=React.useState(0)
 
+  
+
   //почему 2 раза в консоли component did mount? потому . что выполняется WILL UNMOUNT!!!
   // ПОЧЕМУ ВЫПОЛНЯЕТСЯ WILL UNMOUNT ПРИ ПЕРВОЙ ЗАГРУЗКЕ????
   React.useEffect(()=>{
@@ -42,6 +44,7 @@ const stop = ()=>{
         <div className={item} key={t}>{t}</div>)
      }
 <button onClick={()=>{setCount(count+1)}} className={`${item} btn`} style={{backgroundColor:'#be0ddd99'}} >{count}</button>
+<button onClick={()=>{setCount(count-1)}} className='item btn' style={{backgroundColor:'#be0ddd90'}}>{count}</button>
       <button onClick={addTag} className=' item btn' style={{backgroundColor:'blue'}}>+</button>
 
       <button onClick={timer} className='item btn' style={{backgroundColor:'grey'}}>START</button>
