@@ -8,8 +8,28 @@ const[vis,setVis]=React.useState(true)
   const changeVisible =()=>{
   setVis((v)=>!v)
   }
+  //////////////////////////////////////
+  // const hendlScroll=()=>{
+  // console.log('SCROLL')
+  // }
+  /////////////////////////////////////
+  const divRef = React.useRef()
+  React.useEffect(()=>{console.log(divRef)},[])
+
+
+  ////////////////////////////////////
+
+  // React.useEffect(()=>{
+  // let elem = document.getElementById('container')
+  // elem.addEventListener('scroll',hendlScroll)
+  //   const atrib = elem.getAttribute('scroll')
+  //   console.log(atrib +"ytryt")
+  //   console.log( `ELEM= ${elem}`)
+  // },[])
+  ////////////////////////////////////////////
+
   return (
-    <div className="App">
+    <div className="App" id='App' ref={divRef} >
 
         {/*/////////////////////////////////////////////////////*/}
       {/*  <img src={logo} className="App-logo" alt="logo" />*/}
