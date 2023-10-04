@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Tags from "./tags";
 import React from 'react'
@@ -14,7 +14,7 @@ const[vis,setVis]=React.useState(true)
   // }
   /////////////////////////////////////
   const divRef = React.useRef()
-  React.useEffect(()=>{console.log(divRef)},[])
+  React.useEffect(()=>{console.log(`divRef= ${divRef.current}`)},[])
 
 
   ////////////////////////////////////
@@ -51,4 +51,4 @@ const[vis,setVis]=React.useState(true)
   );
 }
 
-export default App;
+export default App
