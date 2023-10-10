@@ -1,4 +1,5 @@
 import React from 'react';
+import CounterMemo from './counterMemo';
 
 const Tags = () => {
 
@@ -83,14 +84,12 @@ const endScroll=()=>{
      {tag.map((t,index)=>
         <div className={item} key={t}>{t}</div>)
      }
+     <CounterMemo/>
      
 <button onClick={()=>{setCount1(count1+1)}} className={`${item} btn`} style={{backgroundColor:'#be0ddd99'}} >{count1}</button>
 
-
-
 <button onClick={()=>{setCount2(count2-1)}} className='item btn' style={{backgroundColor:'#be0ddd90'}}>{count2}</button>
       <button onClick={addTag} className=' item btn' style={{backgroundColor:'blue'}}>+</button>
-
       <button onClick={timer} className='item btn' style={{backgroundColor:'grey'}}>START</button>
       <button onClick={stop} className='item btn' style={{backgroundColor:'#ffeb3b'}}>STOP</button>
 

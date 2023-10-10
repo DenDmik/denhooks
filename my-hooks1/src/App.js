@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+
 import Tags from "./tags";
 import React from 'react'
 
@@ -45,6 +46,9 @@ const[vis,setVis]=React.useState(true)
       {/*    Learn React*/}
       {/*  </a>*/}
       {/*  /////////////////////////////////////////////////////*/}
+
+
+
         {vis&&<Tags/>}
       <button className="item btn" onClick={changeVisible}>CHANGE VISIBLE</button>
     </div>
