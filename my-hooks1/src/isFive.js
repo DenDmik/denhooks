@@ -2,7 +2,7 @@ import React from "react";
 let renderCount =0;
 export default React.memo(
  function IsFive({value}){
-    console.warn(`isFive render: ${++renderCount}`)
+    // console.warn(`isFive render: ${++renderCount}`)
     const getResult=React.useMemo(
         ()=>{
             let i=1
@@ -15,7 +15,7 @@ export default React.memo(
         <h2>{getResult}</h2>)
 },
 (prevProps,nextProps)=>{
-    console.log(prevProps,nextProps)
+    // console.log(prevProps,nextProps)
     if(nextProps.value==5){return false;}
     else{
         return true

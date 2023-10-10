@@ -12,7 +12,7 @@ export default React.memo(
  function Count({id,value}){
     // здесь rend[`count${id}`] выбирается содержимое поля count в обьекте rend // [`count${id}`] =>запись поля  count1 или count2
     // в зависимости от id//
-console.log(`Count${id} render:${++rend[`count${id}`]}`)
+// console.log(`Count${id} render:${++rend[`count${id}`]}`)
 return(
     <div>
         <h1 className="cyan">{value}</h1>

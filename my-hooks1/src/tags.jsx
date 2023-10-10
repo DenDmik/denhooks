@@ -47,28 +47,28 @@ const timer=()=>{
 // функция сброса таймера//работае с исп useRef
 const stop = ()=>{
     clearInterval(timerIdRef.current)
-    console.log(tagRef.current)
+    // console.log(tagRef.current)
 }
 ///////////////////////////////////////////////////////////
 
   /////////////////////////////////функция вывода на консоль при скроле
 let hendlScroll=React.useCallback(
    ()=>{
-    console.log('SCROLL')
-    console.log(ulRef.current)
-    
+    // console.log('SCROLL')
+    // console.log(ulRef.current)
+
 
   },[])
 
   //////////////////////////////////добавили скролл при первом рендере
  
   React.useEffect(()=>{
-   console.log(ulRef.current)
+   // console.log(ulRef.current)
   ulRef.current.addEventListener('scroll',hendlScroll)
   },[])
   /////////////////////////////////убрали скролл//скролл не убирается после выполнения addTag / не знаю почему.Если не выполнять addTag,то убирается
 const endScroll=()=>{
-  console.log(ulRef.current)
+  // console.log(ulRef.current)
     ulRef.current.removeEventListener('scroll',hendlScroll)
    
 };

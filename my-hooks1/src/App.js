@@ -15,7 +15,7 @@ const[vis,setVis]=React.useState(true)
   // }
   /////////////////////////////////////
   const divRef = React.useRef()
-  React.useEffect(()=>{console.log(`divRef= ${divRef.current}`)},[])
+  // React.useEffect(()=>{console.log(`divRef= ${divRef.current}`)},[])
 
 
   ////////////////////////////////////
@@ -27,7 +27,19 @@ const[vis,setVis]=React.useState(true)
   //   console.log(atrib +"ytryt")
   //   console.log( `ELEM= ${elem}`)
   // },[])
-  ////////////////////////////////////////////
+  ////////////////////////////////////////////промисы
+  console.log('start')
+   Promise.resolve().then(()=>{
+    console.log('promise1')
+    setTimeout(()=>{console.log('timer2')},0)
+    })
+    setTimeout(()=>{
+      console.log('timer1')
+      Promise.resolve().then(()=>{console.log('promise2')})
+    },0)
+    console.log('end')
+
+  ///////////////////////////////////////////
 
   return (
     <div className="App" id='App' ref={divRef} >
